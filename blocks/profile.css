@@ -1,0 +1,75 @@
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 34px 80px 0 80px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+  max-width: 1280px;
+}
+
+.profile__columns {
+  display: flex;
+  gap: 20px;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__edit-btn {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  background: transparent;
+  border: none;
+  width: 108px;
+  height: 16px;
+  padding: 0;
+  color: #212121cc;
+}
+
+.profile__edit-btn:hover {
+  color: #212121;
+  cursor: pointer;
+}
+
+.profile__picture {
+  width: 190px;
+  height: 190px;
+}
+
+.profile__name {
+  font-family: "Poppins-Regular";
+  margin: 0 0 12 0;
+  font-size: 32px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.profile__description {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121b2;
+}
+
+.profile__new-post-btn {
+  display: flex;
+  font-size: 16px;
+  width: 149px;
+  height: 52px;
+  align-self: flex-end;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 32px;
+  gap: 8px;
+  color: #fcf5e5;
+  background: #212121;
+}
+
+.profile__new-post-btn:hover {
+  background: #212121cc;
+  cursor: pointer;
+}
