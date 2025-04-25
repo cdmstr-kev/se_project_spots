@@ -2,9 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 34px 80px 0 80px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid #21212166;
+  padding: 34px 0 20px;
   max-width: 1280px;
 }
 
@@ -19,6 +19,8 @@
 }
 
 .profile__edit-btn {
+  font-family: "Poppins";
+  font-weight: 500;
   display: flex;
   gap: 8px;
   margin-top: auto;
@@ -41,22 +43,27 @@
 }
 
 .profile__name {
-  font-family: "Poppins-Regular";
-  margin: 0 0 12 0;
+  font-family: "Poppins";
+  margin: 0 0 12px 0;
   font-size: 32px;
   font-weight: 500;
+  line-height: 1;
   color: #212121;
 }
 
 .profile__description {
   margin: 0;
+  font-family: "Poppins";
   font-size: 16px;
   font-weight: 500;
+  line-height: 1;
   color: #212121b2;
 }
 
 .profile__new-post-btn {
   display: flex;
+  font-family: "Poppins";
+  font-weight: 500;
   font-size: 16px;
   width: 149px;
   height: 52px;
@@ -67,6 +74,7 @@
   gap: 8px;
   color: #fcf5e5;
   background: #212121;
+  white-space: nowrap;
 }
 
 .profile__new-post-btn:hover {
