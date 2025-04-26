@@ -49,6 +49,12 @@
   font-weight: 500;
   line-height: 1;
   color: #212121;
+  max-width: 420px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__description {
@@ -58,6 +64,12 @@
   font-weight: 500;
   line-height: 1;
   color: #212121b2;
+  max-width: 420px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__new-post-btn {
