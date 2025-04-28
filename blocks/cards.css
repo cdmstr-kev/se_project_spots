@@ -1,5 +1,5 @@
 .cards {
-  padding: 20px 16px 40px;
+  padding: 20px 0 40px;
   border-bottom: 1px solid #21212166;
   margin: 0 auto;
   max-width: 1280px;
@@ -23,8 +23,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 12px 0 0 0;
+  margin: 12px 0 0;
+  padding: 0;
 }
 
 .card__icon {
@@ -59,4 +59,35 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 450px) {
+  .cards__list {
+    max-width: 288px;
+    grid-template-columns: repeat(auto-fit, 288px);
+  }
+
+  .cards {
+    max-width: 288px;
+    padding: 20px 0 52px;
+  }
+
+  .card {
+    width: 288px;
+    height: 288px;
+  }
+
+  .card__image {
+    height: 288px;
+    width: 288px;
+  }
+
+  .card__description {
+    font-size: 16px;
+  }
+
+  .card__heart-icon {
+    width: 20px;
+    height: 18px;
+  }
 }
