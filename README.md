@@ -62,6 +62,10 @@ Version control and deployment for easy collaboration and live previews.
 
 - https://cdmstr-kev.github.io/se_project_spots/
 
+## Video Walkthrough
+
+https://drive.google.com/file/d/1Su3vhCBb3ktckXmXPnVvjE7qSaQ85eWJ/view?usp=sharing
+
 ## Screenshots
 
 ![Desktop Preview](./images/image.png)
