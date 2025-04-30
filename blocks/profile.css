@@ -149,6 +149,11 @@
     max-width: 288px;
   }
 
+  .profile__picture {
+    width: 80px;
+    height: 80px;
+  }
+
   .profile__new-post-btn {
     width: 288px;
   }
