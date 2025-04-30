@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 826px) {
   .profile {
     flex-direction: column;
     max-width: 650px;
@@ -135,10 +135,12 @@
   .profile__name {
     font-size: 20px;
     margin-bottom: 6px;
+    text-align: center;
   }
 
   .profile__description {
     margin-bottom: 32px;
+    text-align: center;
   }
 }
 
