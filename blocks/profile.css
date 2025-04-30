@@ -129,8 +129,6 @@
   .profile__new-post-btn {
     align-self: center;
     width: 288px;
-    justify-content: center;
-    gap: 8px;
     background-position: calc(100% - 178px) center;
   }
 
