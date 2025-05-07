@@ -179,6 +179,64 @@
       <footer class="footer">
         <p class="footer__copyright">2023 &copy; Spots</p>
       </footer>
+      <div class="modal">
+        <div class="modal__container">
+          <h2 class="modal__title">Edit profile</h2>
+          <button type="button" class="modal__close-btn"></button>
+          <form class="modal__form">
+            <fieldset class="modal__form-fieldset">
+              <label for="profile-name" class="modal__label">Name</label>
+              <input
+                type="text"
+                class="modal__input"
+                id="profile-name"
+                name="name"
+                placeholder="Type your name"
+              />
+              <label for="description" class="modal__label">Description</label>
+              <input
+                type="text"
+                class="modal__input"
+                id="description"
+                name="description"
+                placeholder="Describe yourself"
+              />
+            </fieldset>
+            <fieldset class="modal__form-fieldset">
+              <button type="submit" class="modal__save-button">Save</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-open">
+        <div class="modal__container">
+          <h2 class="modal__title">New Post</h2>
+          <button type="button" class="modal__close-btn"></button>
+          <form class="modal__form">
+            <fieldset class="modal__form-fieldset">
+              <label for="image-link" class="modal__label">Image link</label>
+              <input
+                type="url"
+                class="modal__input"
+                id="image-link"
+                name="Image-link"
+                placeholder="Paste a link to the picture"
+              />
+              <label for="caption" class="modal__label">Caption</label>
+              <input
+                type="text"
+                class="modal__input"
+                id="caption"
+                name="caption"
+                placeholder="Type your caption"
+              />
+            </fieldset>
+            <fieldset class="modal__form-fieldset">
+              <button type="submit" class="modal__save-button">Save</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
