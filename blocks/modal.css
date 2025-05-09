@@ -47,6 +47,12 @@
   opacity: 40%;
   background-image: url(../images/close_button.svg);
   background-position: center;
+  color: red;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .modal__label {
