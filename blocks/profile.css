@@ -158,3 +158,15 @@
     width: 288px;
   }
 }
+
+.footer__copyright {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  padding: 60px 16px;
+  color: #212121b2;
+}
+
