@@ -189,7 +189,11 @@
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <h2 class="modal__title">Edit profile</h2>
-          <button type="button" class="modal__close-btn"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="close-button"
+          ></button>
           <form class="modal__form">
             <fieldset class="modal__form-fieldset">
               <label for="profile-name" class="modal__label">Name</label>
@@ -199,6 +203,7 @@
                 id="profile-name"
                 name="name"
                 placeholder="Type your name"
+                required
               />
               <label for="description" class="modal__label">Description</label>
               <input
@@ -207,6 +212,7 @@
                 id="description"
                 name="description"
                 placeholder="Describe yourself"
+                required
               />
             </fieldset>
             <fieldset class="modal__form-fieldset">
@@ -218,7 +224,11 @@
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
           <h2 class="modal__title">New Post</h2>
-          <button type="button" class="modal__close-btn"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="close-button"
+          ></button>
           <form class="modal__form">
             <fieldset class="modal__form-fieldset">
               <label for="image-link" class="modal__label">Image link</label>
@@ -228,6 +238,7 @@
                 id="image-link"
                 name="image-link"
                 placeholder="Paste a link to the picture"
+                required
               />
               <label for="caption" class="modal__label">Caption</label>
               <input
@@ -236,6 +247,7 @@
                 id="caption"
                 name="caption"
                 placeholder="Type your caption"
+                required
               />
             </fieldset>
             <fieldset class="modal__form-fieldset">

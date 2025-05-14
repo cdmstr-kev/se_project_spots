@@ -27,6 +27,7 @@
   width: 100%;
   background-color: #fff;
   padding: 32px 50px;
+  box-sizing: border-box;
 }
 
 .modal__title {
@@ -35,7 +36,6 @@
   font-weight: 500;
   line-height: 1;
   font-size: 32px;
-  min-width: 160px;
   color: #212121;
   padding: 4px 0;
 }
@@ -51,7 +51,7 @@
   opacity: 40%;
   background-image: url(../images/close_button.svg);
   background-position: center;
-  color: red;
+  transition: 0.5s ease-in-out;
 }
 
 .modal__close-btn:hover {
@@ -107,6 +107,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  border: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .modal__save-button:hover {
@@ -122,6 +124,10 @@
 
   .modal__title {
     font-size: 20px;
+  }
+
+  .modal__input {
+    font-size: 16px;
   }
 
   .modal__close-btn {

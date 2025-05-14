@@ -17,6 +17,7 @@
   padding: 0;
   border: none;
   opacity: 0.4;
+  transition: 0.5s ease-in-out;
 }
 
 .card__icon:hover {
