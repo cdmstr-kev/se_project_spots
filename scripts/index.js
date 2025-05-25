@@ -47,12 +47,10 @@ const newPostLinkInput = newPostModal.querySelector("#image-link");
 
 function openModal(modal) {
   modal.classList.add("modal_is-open");
-  console.log("clicked");
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-open");
-  console.log("clicked");
 }
 
 editProfileBtn.addEventListener("click", function () {
