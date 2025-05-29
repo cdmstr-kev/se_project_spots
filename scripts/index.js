@@ -47,21 +47,28 @@ const newPostLinkInput = newPostModal.querySelector("#image-link");
 const cardsContainer = document.querySelector(".cards__list");
 const cardTemplate = document
   .querySelector("#card-template")
-  .content;
+  .content.querySelector(".card");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
-  const cardTitle = cardElement.querySelector(".card__description");
-  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitleEl = cardElement.querySelector(".card__description");
+  const cardImageEl = cardElement.querySelector(".card__image");
 
-  cardImage.src = data.link;
-  cardImage.alt = data.name;
-  cardTitle.textContent = data.name;
+
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+  cardTitleEl.textContent = data.name;
 
   const likeBtnElement = cardElement.querySelector(".card__icon")
 
   likeBtnElement.addEventListener("click", () => {
     likeBtnElement.classList.toggle("card__icon_active");
+  })
+
+  const cardDeleteEl = cardElement.querySelector(".card__delete-btn")
+
+  cardDeleteEl.addEventListener("click", () => {
+    cardElement.remove();
   })
 
   return cardElement;
