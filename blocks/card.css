@@ -71,6 +71,10 @@
   border-radius: 8px;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 450px) {
   .card {
     width: 288px;
