@@ -23,6 +23,10 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
@@ -48,28 +52,50 @@ const cardsContainer = document.querySelector(".cards__list");
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
+const previewModalElement = document.querySelector("#preview-modal");
+const previewModalCloseBtn =
+  previewModalElement.querySelector(".modal__close-btn");
+const previewModalImage = previewModalElement.querySelector(".modal__image");
+const previewModalCaption =
+  previewModalElement.querySelector(".modal__caption");
+
+function imagePreviewModal(data) {
+  previewModalImage.src = data.link;
+  previewModalImage.alt = data.name;
+  previewModalCaption.name = data.name;
+
+  openModal(previewModalElement);
+}
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__description");
   const cardImageEl = cardElement.querySelector(".card__image");
 
-
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
 
-  const likeBtnElement = cardElement.querySelector(".card__icon")
+  const likeBtnElement = cardElement.querySelector(".card__icon");
 
   likeBtnElement.addEventListener("click", () => {
     likeBtnElement.classList.toggle("card__icon_active");
-  })
+  });
 
-  const cardDeleteEl = cardElement.querySelector(".card__delete-btn")
+  const cardDeleteEl = cardElement.querySelector(".card__delete-btn");
 
   cardDeleteEl.addEventListener("click", () => {
     cardElement.remove();
-  })
+  });
+  /*This is the section i am working on. Need to figure out how to grab the reference data and pass it to the image preview. */
+  cardImageEl.addEventListener("click", () => {
+    previewModalCaption.textContent = data.name;
+    previewModalImage.src = data.link;
+    previewModalImage.alt = data.name;
+    previewModalElement.classList.toggle("modal_is-open");
+
+    imagePreviewModal(data);
+  });
 
   return cardElement;
 }
@@ -107,8 +133,11 @@ function handleNewPostFormSubmit(evt) {
 
   const newCardData = {
     name: newPostCaptionInput.value,
-    link: newPostLinkInput.value
-  }
+    link: newPostLinkInput.value,
+  };
+
+  console.log(newPostCaptionInput.value);
+  console.log(newPostLinkInput.value);
 
   const newCard = getCardElement(newCardData);
 
@@ -127,9 +156,11 @@ newPostModalCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-initialCards.forEach(function (cardData) {
-  const newCard = getCardElement(cardData);
-  cardsContainer.prepend(newCard)
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModalElement);
 });
 
-
+initialCards.forEach(function (cardData) {
+  const newCard = getCardElement(cardData);
+  cardsContainer.prepend(newCard);
+});

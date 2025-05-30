@@ -54,9 +54,21 @@
   transition: 0.5s ease-in-out;
 }
 
+.modal__close-btn_type_preview {
+  right: -52.5px;
+  top: 0;
+  background-image: url(../images/closeBtnTypePreview.svg);
+  opacity: 1;
+}
+
 .modal__close-btn:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.modal__close-btn_type_preview:hover {
+  cursor: pointer;
+  opacity: 0.4;
 }
 
 .modal__label {
@@ -116,6 +128,46 @@
   opacity: 80%;
 }
 
+.modal__image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.modal__caption {
+  color: #fff;
+  align-self: flex-start;
+  font-size: 20px;
+  border: 1px solid #212121;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 0;
+  background-color: #212121;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 650px) {
+  .modal__close-btn_type_preview {
+    right: 0;
+    top: -48px;
+  }
+  .modal__container {
+    max-width: 300px;
+    padding: 12px 12px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .modal__container {
     max-width: 300px;
@@ -142,5 +194,19 @@
 
   .modal__save-button {
     max-width: 276px;
+  }
+
+  .modal__close-btn_type_preview {
+    right: 0;
+    top: -48px;
+  }
+
+  .modal__image {
+    min-width: 288px;
+    max-width: 288px;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 }
