@@ -33,6 +33,7 @@ const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const profileModalCloseBtn =
   editProfileModal.querySelector(".modal__close-btn");
+const modalCloseButtons = document.querySelectorAll(".modal__close-btn");
 
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
@@ -59,10 +60,15 @@ const previewModalImage = previewModalElement.querySelector(".modal__image");
 const previewModalCaption =
   previewModalElement.querySelector(".modal__caption");
 
-function imagePreviewModal(data) {
+modalCloseButtons.forEach((button) => {
+  const relatedModal = button.closest(".modal")
+  button.addEventListener("click", () => closeModal(relatedModal));
+});
+
+function handleImageClick(data) {
   previewModalImage.src = data.link;
   previewModalImage.alt = data.name;
-  previewModalCaption.name = data.name;
+  previewModalCaption.textContent = data.name;
 
   openModal(previewModalElement);
 }
@@ -87,14 +93,9 @@ function getCardElement(data) {
   cardDeleteEl.addEventListener("click", () => {
     cardElement.remove();
   });
-  /*This is the section i am working on. Need to figure out how to grab the reference data and pass it to the image preview. */
-  cardImageEl.addEventListener("click", () => {
-    previewModalCaption.textContent = data.name;
-    previewModalImage.src = data.link;
-    previewModalImage.alt = data.name;
-    previewModalElement.classList.toggle("modal_is-open");
 
-    imagePreviewModal(data);
+  cardImageEl.addEventListener("click", () => {
+    handleImageClick(data);
   });
 
   return cardElement;
@@ -112,10 +113,6 @@ editProfileBtn.addEventListener("click", function () {
   openModal(editProfileModal);
   profileNameInput.value = profileName.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-});
-
-profileModalCloseBtn.addEventListener("click", function () {
-  closeModal(editProfileModal);
 });
 
 function handleProfileFormSubmit(evt) {
@@ -150,14 +147,6 @@ addCardFormElement.addEventListener("submit", handleNewPostFormSubmit);
 
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
-});
-
-newPostModalCloseBtn.addEventListener("click", function () {
-  closeModal(newPostModal);
-});
-
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModalElement);
 });
 
 initialCards.forEach(function (cardData) {
