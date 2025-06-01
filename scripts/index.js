@@ -125,6 +125,11 @@ function handleProfileFormSubmit(evt) {
 
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
+function renderCard(cardData, method = "prepend") {
+  const newCard = getCardElement(cardData);
+  cardsContainer[method](newCard);
+}
+
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
 
@@ -136,9 +141,9 @@ function handleNewPostFormSubmit(evt) {
   console.log(newPostCaptionInput.value);
   console.log(newPostLinkInput.value);
 
-  const newCard = getCardElement(newCardData);
+  renderCard(newCardData)
 
-  cardsContainer.prepend(newCard);
+  evt.target.reset()
 
   closeModal(newPostModal);
 }
@@ -150,6 +155,5 @@ newPostBtn.addEventListener("click", function () {
 });
 
 initialCards.forEach(function (cardData) {
-  const newCard = getCardElement(cardData);
-  cardsContainer.prepend(newCard);
+  renderCard(cardData, "append");
 });
