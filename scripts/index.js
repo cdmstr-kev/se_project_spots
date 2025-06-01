@@ -61,7 +61,7 @@ const previewModalCaption =
   previewModalElement.querySelector(".modal__caption");
 
 modalCloseButtons.forEach((button) => {
-  const relatedModal = button.closest(".modal")
+  const relatedModal = button.closest(".modal");
   button.addEventListener("click", () => closeModal(relatedModal));
 });
 
@@ -141,9 +141,9 @@ function handleNewPostFormSubmit(evt) {
   console.log(newPostCaptionInput.value);
   console.log(newPostLinkInput.value);
 
-  renderCard(newCardData)
+  renderCard(newCardData);
 
-  evt.target.reset()
+  evt.target.reset();
 
   closeModal(newPostModal);
 }
