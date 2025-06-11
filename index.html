@@ -61,13 +61,7 @@
                     type="button"
                     class="card__icon"
                     aria-label="like button"
-                  >
-                    <!-- <img
-                      class="card__heart-icon"
-                      src="./images/heart.svg"
-                      alt="btn like icon"
-                    /> -->
-                  </button>
+                  ></button>
                   <button
                     type="button"
                     class="card__delete-btn"
@@ -90,7 +84,7 @@
             class="modal__close-btn"
             aria-label="close-button"
           ></button>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <fieldset class="modal__form-fieldset">
               <label for="profile-name" class="modal__label">Name</label>
               <input
@@ -100,7 +94,13 @@
                 name="name"
                 placeholder="Type your name"
                 required
+                minlength="2"
+                maxlength="40"
               />
+              <span class="modal__error" id="profile-name-error"></span>
+            </fieldset>
+
+            <fieldset class="modal__form-fieldset">
               <label for="description" class="modal__label">Description</label>
               <input
                 type="text"
@@ -108,9 +108,13 @@
                 id="description"
                 name="description"
                 placeholder="Describe yourself"
+                minlength="2"
+                maxlength="200"
                 required
               />
+              <span class="modal__error" id="description-error"></span>
             </fieldset>
+
             <fieldset class="modal__form-fieldset">
               <button type="submit" class="modal__save-button">Save</button>
             </fieldset>
@@ -125,7 +129,7 @@
             class="modal__close-btn"
             aria-label="close-button"
           ></button>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <fieldset class="modal__form-fieldset">
               <label for="image-link" class="modal__label">Image link</label>
               <input
@@ -136,6 +140,9 @@
                 placeholder="Paste a link to the picture"
                 required
               />
+              <span class="modal__error" id="image-link-error"></span>
+            </fieldset>
+            <fieldset class="modal__form-fieldset">
               <label for="caption" class="modal__label">Caption</label>
               <input
                 type="text"
@@ -143,8 +150,11 @@
                 id="caption"
                 name="caption"
                 placeholder="Type your caption"
+                minlength="2"
+                maxlength="30"
                 required
               />
+              <span class="modal__error" id="caption-error"></span>
             </fieldset>
             <fieldset class="modal__form-fieldset">
               <button type="submit" class="modal__save-button">Save</button>
@@ -165,5 +175,6 @@
       </div>
     </div>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>
