@@ -121,7 +121,6 @@ modalElements.forEach((modal) => {
   });
 });
 
-
 function closeOpenModalsOnEscape(evt) {
   if (evt.key === "Escape") {
     modalElements.forEach((modal) => {
@@ -173,6 +172,10 @@ function handleNewPostFormSubmit(evt) {
 
   evt.target.reset();
   disableButton(modalSubmitButton, settings);
+  const inputList = Array.from(
+    evt.target.querySelectorAll(settings.inputSelector)
+  );
+  resetValidation(evt.target, inputList, settings);
 
   closeModal(newPostModal);
 }
