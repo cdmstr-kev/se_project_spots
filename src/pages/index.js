@@ -1,6 +1,18 @@
+import {
+  enableValidation,
+  resetValidation,
+  disableButton,
+  settings,
+} from "../scripts/validation.js";
+import "./index.css";
+import profilepicture from "../images/avatar.jpg";
+import logo from "../images/logo.svg";
 
-import { enableValidation, resetValidation, disableButton, settings } from "./validation.js";
+const logoImg = document.getElementById("logo");
+const profilePic = document.getElementById("profile-picture");
 
+profilePic.src = profilepicture;
+logoImg.src = logo;
 
 const initialCards = [
   {
