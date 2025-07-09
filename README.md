@@ -68,6 +68,6 @@ https://drive.google.com/file/d/1Su3vhCBb3ktckXmXPnVvjE7qSaQ85eWJ/view?usp=shari
 
 ## Screenshots
 
-![Desktop Preview](./images/image.png)
-![Mobile Device Preview](./images/image-1.png)
-![Tablet Preview](./images/image-2.png)
+![Desktop Preview](src/images/image.png)
+![Mobile Device Preview](src/images/image-1.png)
+![Tablet Preview](src/images/image-2.png)
