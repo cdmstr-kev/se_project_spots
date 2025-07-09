@@ -1,3 +1,7 @@
+
+import { enableValidation, resetValidation, disableButton, settings } from "./validation.js";
+
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -189,3 +193,5 @@ newPostBtn.addEventListener("click", function () {
 initialCards.forEach(function (cardData) {
   renderCard(cardData, "append");
 });
+
+enableValidation(settings);
