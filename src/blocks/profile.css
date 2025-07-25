@@ -18,6 +18,44 @@
   flex-direction: column;
 }
 
+.profile__avatar-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile__avatar-btn-text {
+  position: absolute;
+  bottom: 12px;
+  left: 63.34px;
+}
+
+.profile__avatar-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: #fff;
+  background-image: url(../images/pencil-light.svg);
+  background-repeat: no-repeat;
+  background-position: left 39px bottom 12px;
+  transition: 0.5s ease-in-out;
+  border-radius: 8px;
+  width: 190px;
+  height: 190px;
+  padding: 0;
+  visibility: hidden;
+}
+
+.profile__avatar-container:hover .profile__avatar-btn {
+  opacity: 0.5;
+  cursor: pointer;
+  background-color: #212121;
+  visibility: visible;
+}
+
 .profile__edit-btn {
   font-size: 16px;
   line-height: 1;
@@ -149,6 +187,23 @@
 @media only screen and (max-width: 320px) {
   .profile {
     max-width: 288px;
+  }
+
+  .profile__avatar-btn-text {
+    visibility: hidden;
+  }
+
+  .profile__avatar-btn {
+    width: 23.34px;
+    height: 23.34px;
+    background-position: right 0 bottom -1.5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 8px;
+    right: 4px;
+    border-radius: 6px;
+    background-origin: content-box;
+    padding: 4px;
+    visibility: visible;
   }
 
   .profile__picture {

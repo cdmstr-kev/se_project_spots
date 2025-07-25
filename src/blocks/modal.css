@@ -133,7 +133,7 @@
   margin: 0;
 }
 
-.modal__save-button {
+.modal__button {
   margin: 32px 0 0;
   max-width: 156px;
   padding: 18px 32px;
@@ -148,9 +148,60 @@
   transition: 0.5s ease-in-out;
 }
 
-.modal__save-button:hover {
+.modal__button:hover {
   cursor: pointer;
   opacity: 80%;
+}
+
+.modal__title_type_delete {
+  font-size: 24px;
+  text-align: center;
+  padding: 0;
+}
+
+.modal__container_type_delete {
+  width: 630px;
+  padding: 32px 20px;
+}
+
+.modal__close-btn_type_delete {
+  right: -52px;
+  top: 0;
+  color: #fff;
+  background-image: url(../images/close-icon-light.svg);
+  opacity: 80%;
+}
+
+.modal__button_type_delete {
+  background-color: #ff6565;
+  color: #212121;
+  width: 156px;
+  padding: 18px 52px;
+}
+
+.modal__button_type_delete:hover {
+  background-color: #ff3333;
+  opacity: 1;
+}
+
+.modal__button_type_cancel {
+  background: transparent;
+  color: #212121;
+  border: 1px solid black;
+  width: 156px;
+  padding: 18px 49px;
+}
+
+.modal__button_type_cancel:hover {
+  background-color: #212121;
+  color: #fff;
+  opacity: 1;
+}
+
+.modal__buttons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .modal__button_disabled {
@@ -187,14 +238,27 @@
   line-height: 1.2;
 }
 
+@media screen and (max-width: 730px) {
+  .modal__close-btn_type_delete {
+    top: -48px;
+    right: 0;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .modal__close-btn_type_preview {
     right: 0;
     top: -48px;
   }
+
   .modal__container {
     max-width: 300px;
     padding: 12px 12px;
+  }
+
+  .modal__container_type_delete {
+    max-width: 630px;
+    padding: 32px 20px;
   }
 }
 
@@ -222,7 +286,7 @@
     margin-top: 24px;
   }
 
-  .modal__save-button {
+  .modal__button {
     max-width: 276px;
   }
 
@@ -238,5 +302,33 @@
 
   .modal__caption {
     font-size: 16px;
+  }
+
+  .modal__container_type_delete {
+    max-width: 300px;
+  }
+
+  .modal__buttons-container {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .modal__button_type_cancel {
+    margin-top: 0;
+  }
+
+  .modal__button_type_delete {
+    margin-top: 20px;
+  }
+
+  .modal__title_type_delete {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .modal__close-btn_type_delete {
+    top: -56px;
+    right: 6px;
   }
 }
