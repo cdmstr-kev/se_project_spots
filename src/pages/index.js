@@ -155,7 +155,6 @@ function handleDeleteCardFormSubmit(evt) {
       return api.deleteCard(selectedCardId).then(() => {
         selectedCard.remove();
         closeModal(deleteCardModal);
-        return data;
       });
     },
     evt,
@@ -187,6 +186,7 @@ function handleProfilePicFormSubmit(evt) {
       .then((data) => {
         profilePic.src = data.avatar;
         closeModal(profilePicModal);
+        disableButton(evt.submitter, settings);
       });
   }, evt);
 }
@@ -250,7 +250,6 @@ addCardFormElement.addEventListener("submit", handleNewPostFormSubmit);
 deleteCardCancelBtn.addEventListener("click", () => {
   closeModal(deleteCardModal);
 });
-
 
 api
   .getAppInfo()
